@@ -1,5 +1,7 @@
 const content = document.querySelector("content");
 const clipedBackground = document.querySelector(".clipped-background");
+const navLinks = document.querySelectorAll(".nav a");
+console.log(navLinks);
 
 function typeText(element, text, index, callback) {
     if (index < text.length) {
@@ -53,7 +55,11 @@ function renderProjects(filterTag = "all") {
                 <source src="${video.source}" type="video/mp4"/>
                 Seu navegador não suporta vídeos.
             </video>
-            <p class="project-text">${video.text}</p>
+            <p class="project-text">
+                ${video.text}<br>
+                ${video.text2 ?? ""}<br>
+                ${video.githubLink ? `<a href="${video.githubLink}" target="_blank" class="github-link">Ver repositório no GitHub</a>` : ""}
+            </p>
         `;
 
         container.appendChild(card);
@@ -93,6 +99,14 @@ function loadContent() {
     clipedBackground.style.display = "none";
     content.classList.remove("slide-in-up");
     content.classList.add("slide-out-up");
+
+    navLinks.forEach(link => {
+        if (link.getAttribute("href") === `#${route}`) {
+            link.classList.add("link-active");
+        } else {
+            link.classList.remove("link-active");
+        }
+    });
 
     setTimeout(() => {
         fetch(document)

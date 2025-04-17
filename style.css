@@ -1,9 +1,20 @@
 /*Geral*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
 
 body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
     scroll-behavior: smooth;
     color: #ffffff;
 }
@@ -56,6 +67,12 @@ a {
     align-items: center;
 }
 
+.link-active {
+    color: #00bcd4;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .logo {
     width: 70px;
 }
@@ -84,6 +101,7 @@ a {
     left: 50%;
     width: 85%;
     height: 85%;
+    max-width: 750px;
     transform: translate(-50%, -50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     background-color: #2c3e50;
@@ -144,6 +162,7 @@ a {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    max-width: 712px;
 }
 
 .home-img-container {
@@ -181,6 +200,7 @@ a {
 /*Project Page*/
 .projects-container {
     text-align: center;
+    max-width: 860px;
 }
 
 .buttons-container {
@@ -230,6 +250,16 @@ a {
 
 .project-text {
     text-align: justify;
+}
+
+.github-link {
+    color: #00bcd4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.github-link:hover {
+    text-decoration: underline;
 }
 
 /*Certifications Page*/
@@ -290,6 +320,7 @@ a {
     background-color: #2c3e50;
     padding: 10px 10px 50px 10px;
     border-radius: 10px;
+    max-width: 790px;
 }
 
 .about-row {
@@ -300,7 +331,7 @@ a {
     flex-wrap: wrap;
 }
 
-.about-row .reverse {
+.about-row.reverse {
     flex-direction: row-reverse;
 }
 
@@ -378,4 +409,156 @@ a {
 
 .email-container button:hover {
     background-color: #2980b9;
+}
+
+/*Responsiviness*/
+@media (max-width: 762px) {
+    .background-container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .screen-container {
+        width: 100%;
+        height: 100%;
+    }
+    .navbar-container {
+        flex-direction: column;
+    }
+
+    .logo {
+        width: 50px;
+    }
+
+    .img-small {
+        width: 30px;
+    }
+
+    .clipped-background {
+        top: 60%;
+        height: 75%;
+    }
+
+    .content-container {
+        min-height: 0px;
+    }
+}
+
+@media (max-width: 660px) {
+    .about-row {
+        flex-direction: column;
+    }
+    .about-row.reverse {
+        flex-direction: column;
+    }
+    .about-text h3 {
+        text-align: center;
+    }
+}
+
+@media (max-width: 646px) {
+    #home-title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 630px) {
+    #home-text {
+        margin: 0px 10px 180px 10px;
+    }
+}
+
+@media (max-width: 630px) {
+    #home-text {
+        margin: 0px 10px 160px 10px;
+    }
+}
+
+@media (max-width: 503px) {
+    .contact-list {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 485px) {
+    .navbar-container {
+        font-size: 12px;
+    }
+    .logo {
+        width: 40px;
+    }
+
+    .img-small {
+        width: 20px;
+    }
+}
+
+@media (max-width: 461px) {
+    .buttons-container {
+        gap: 10px;
+    }
+    
+    .language-button {
+       max-width: 76px;
+       min-width: 0;
+       background-color: gray;
+       color: white; 
+    }
+
+    .project-card h3 {
+        font-size: 16px;
+    }
+
+    .project-text {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 457px) {
+    .contacts-content {
+        justify-content: center;
+    }
+
+    .contact-list {
+        text-align: center;
+    }
+}
+
+@media (max-width: 453px) {
+    #home-title {
+        font-size: 20px;
+    }
+    
+    #home-text {
+        margin: 0px 10px 110px 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 410px) {
+    .nav ul {
+        gap: 1px;
+    }
+    .home-page-container {
+        padding: 250px 70px 50px 70px;
+    }
+}
+
+@media (max-width: 394px) {
+    .nav ul li {
+        padding: 11px;
+    }
+}
+
+@media (max-width: 352px) {
+    .navbar-container {
+        font-size: 10px;
+    }
+    .logo {
+        width: 35px;
+    }
+
+    .img-small {
+        width: 17   px;
+    }
 }
