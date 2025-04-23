@@ -1,4 +1,6 @@
 /*Geral*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -17,6 +19,7 @@ body {
     padding: 0;
     scroll-behavior: smooth;
     color: #ffffff;
+    font-family: Poppins;
 }
 
 a {
@@ -30,7 +33,7 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: black;
+    background-color: rgb(0, 0, 35);
 }
 
 .screen-container {
@@ -82,12 +85,13 @@ a {
 }
 
 .hove-click {
-    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    /* clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%); */
+    border-radius: 10px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 .hove-click:hover {
-    background-color: gray;   
+    background-color: rgb(49, 48, 48);   
 }
 
 .hove-click:active {
@@ -97,11 +101,11 @@ a {
 
 .clipped-background {
     position: absolute;
-    top: 54%;
-    left: 50%;
+    top: 57%;
+    left: 49.99%;
     width: 85%;
     height: 85%;
-    max-width: 750px;
+    max-width: 700px;
     transform: translate(-50%, -50%);
     clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
     background-color: #2c3e50;
@@ -163,6 +167,7 @@ a {
     justify-content: center;
     align-items: center;
     max-width: 712px;
+    margin-top: 50px;
 }
 
 .home-img-container {
@@ -201,6 +206,7 @@ a {
 .projects-container {
     text-align: center;
     max-width: 860px;
+    margin-top: 50px;
 }
 
 .buttons-container {
@@ -248,6 +254,11 @@ a {
     padding-bottom: 45px;
 }
 
+.project-card h3 {
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
 .project-text {
     text-align: justify;
 }
@@ -271,7 +282,7 @@ a {
 }
 .certification-list {
     list-style: none;
-    padding: 10px;
+    padding: 20px;
     margin: 0 auto;
     margin-top: 10%;
     max-width: 600px;
@@ -284,12 +295,13 @@ a {
 }
 
 .certification-item {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(240, 240, 240, 0.05);
     padding: 10px;
     border-radius: 8px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-size: 14px;
 }
 
 .certification-button {
@@ -318,17 +330,23 @@ a {
     flex-direction: column;
     gap: 20px;
     background-color: #2c3e50;
-    padding: 10px 10px 50px 10px;
+    padding: 10px 30px 50px 30px;
+    margin-top: 50px;
     border-radius: 10px;
-    max-width: 790px;
+    max-width: 980px;
 }
 
 .about-row {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+    gap: 25px;
     flex-wrap: wrap;
+}
+
+.about-text h3 {
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
 .about-row.reverse {
@@ -344,15 +362,16 @@ a {
     flex: 1;
     max-width: 400px;
     width: 100%;
+    height: 320px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    /* margin-bottom: 40px; */
 }
-
 /*Contacts Page*/
 .contacts-content {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     padding: 15px 15px 60px 15px;
     background-color: #2c3e50;
     border-radius: 10px;
@@ -360,7 +379,15 @@ a {
 }
 
 .contact-list {
-    margin-right: 8%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-list h2, .email-container h2 {
+    text-transform: uppercase;
+    font-weight: 900;
 }
 
 .contact-list ul {
@@ -412,7 +439,11 @@ a {
 }
 
 /*Responsiviness*/
-@media (max-width: 762px) {
+@media (max-width: 832px) {
+    body {
+        height: auto;
+    }
+
     .background-container {
         width: 100%;
         height: 100%;
@@ -442,9 +473,11 @@ a {
     .content-container {
         min-height: 0px;
     }
-}
 
-@media (max-width: 660px) {
+    .home-page-container {
+        padding: 200px 100px 50px 100px;
+    }
+
     .about-row {
         flex-direction: column;
     }
@@ -456,9 +489,17 @@ a {
     }
 }
 
-@media (max-width: 646px) {
+@media (max-width: 706px) {
     #home-title {
         text-align: center;
+    }
+
+    #home-text {
+        margin: 0px 10px 130px 10px;
+    }
+
+    .project-text {
+        font-size: 14px;
     }
 }
 
@@ -470,20 +511,40 @@ a {
 
 @media (max-width: 630px) {
     #home-text {
-        margin: 0px 10px 160px 10px;
+        margin: 0px 10px 100px 10px;
     }
 }
 
-@media (max-width: 503px) {
+@media (max-width: 582px) {
+    .certification-item {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 548px) {
+    .navbar-container {
+        font-size: 12px;
+    }
+
+    .nav ul li {
+        padding: 12px;
+    }
+
+    .project-text {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 504px) {
+    #home-text {
+        margin: 0px 10px 40px 10px;
+    }
     .contact-list {
         margin-right: 0;
     }
 }
 
 @media (max-width: 485px) {
-    .navbar-container {
-        font-size: 12px;
-    }
     .logo {
         width: 40px;
     }
@@ -508,10 +569,6 @@ a {
     .project-card h3 {
         font-size: 16px;
     }
-
-    .project-text {
-        font-size: 14px;
-    }
 }
 
 @media (max-width: 457px) {
@@ -533,6 +590,20 @@ a {
         margin: 0px 10px 110px 10px;
         font-size: 12px;
     }
+
+    .about-section {
+        padding: 10px 10px 50px 10px;
+    }
+
+    .about-text p {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 426px) {
+    .nav ul li {
+        padding: 8px;
+    }
 }
 
 @media (max-width: 410px) {
@@ -544,13 +615,13 @@ a {
     }
 }
 
-@media (max-width: 394px) {
-    .nav ul li {
-        padding: 11px;
+@media (max-width: 392px) {
+    .email-container h2 {
+        text-align: center;
     }
 }
 
-@media (max-width: 352px) {
+@media (max-width: 370px) {
     .navbar-container {
         font-size: 10px;
     }
@@ -559,6 +630,48 @@ a {
     }
 
     .img-small {
-        width: 17   px;
+        width: 17px;
+    }
+
+    .project-text {
+        font-size: 10px;
+    }
+
+    .about-section {
+        padding: 10px 5px 50px 5px;
+    }
+}
+
+@media (max-width: 342px) {
+    #home-text {
+        margin: 0px 10px 40px 10px;
+    }
+}
+
+@media (max-width: 323px) {
+    #home-text {
+        margin: 0px 10px 10px 10px;
+    }
+
+    .home-page-container {
+        padding: 200px 70px 50px 70px;
+    }
+
+    .nav ul li {
+        padding: 5px;
+    }
+
+    .about-text p {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 298px) {
+    #home-text {
+        font-size: 10px;
+    }
+
+    #home-title {
+        font-size: 17px;
     }
 }
