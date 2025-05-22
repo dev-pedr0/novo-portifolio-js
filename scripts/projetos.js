@@ -134,4 +134,13 @@ const videos = [
         text2: "Linguagens e Ferramentas utilizadas: C#.",
         githubLink: "https://github.com/dev-pedr0/TurnBaseCombatCSharp"
     },
+    {
+        name: "Sistema de Cadastro com Spring Boot",
+        main: true,
+        tag: "java",
+        source: "../videos/Springboot-cadastro-java.mp4",
+        text: "Um dos meus projetos mais backends que frontend. Mas um programador que se preze não pode se deixar intimidar, então este projeto foi um teste das minhas habilidades com desenvolvimento de API’s e conexão com banco de dados. Um simples sistema de cadastro e visualização de usuários que pode ser rapidamente expandido.",
+        text2: "Linguagens e Ferramentas utilizadas: Java (spring boot), HTML, CSS, javascript, MySQL",
+        githubLink: "https://github.com/dev-pedr0/cadastro-spring-boot"
+    },
 ];

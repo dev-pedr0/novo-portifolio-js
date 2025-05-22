@@ -34,5 +34,9 @@ const certifications = [
     {
         name: "Certificação em React",
         source: "",
-    }
+    },
+    {
+        name: "Certificação em Docker",
+        source: "../imgs/certifications/Certificado Docker.png",
+    },
 ];
